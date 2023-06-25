@@ -1,7 +1,7 @@
 [project]
-name = "wethrereport"
+name = "weatherreport"
 version = "0.1.0"
-description = "Add a short description here"
+description = "This report uses the gpt-function-calling to provide weather information."
 authors = [
     { name = "ryouhama", email = "hary0730cap@icloud.com" }
 ]
