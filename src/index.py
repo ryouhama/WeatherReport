@@ -2,7 +2,7 @@ import argparse
 from dotenv import load_dotenv
 from langchain.agents import AgentType, initialize_agent
 from langchain.chat_models import ChatOpenAI
-from tools.open_weather import OpenWeathreTool
+from tools.open_weather import GetCurrentWeatherTool
 
 
 def setup():
@@ -13,7 +13,7 @@ def run(prompt: str):
     # 使用するモデルを定義
     llm = ChatOpenAI(model='gpt-3.5-turbo-0613', temperature=0)
     # 使用するツールをリストとして定義
-    tools = [OpenWeathreTool()]
+    tools = [GetCurrentWeatherTool()]
     # エージェントを初期化
     agent = initialize_agent(
         tools=tools,

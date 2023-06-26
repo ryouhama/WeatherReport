@@ -22,5 +22,8 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 
+[tool.rye.scripts]
+wr = "python src/index.py"
+
 [tool.hatch.metadata]
 allow-direct-references = true

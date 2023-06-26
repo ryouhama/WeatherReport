@@ -1,4 +1,4 @@
-from typing import Optional, Type
+from typing import Optional, Type, Any
 from json import dumps as json_dumps
 from pydantic import BaseModel
 from langchain.tools import BaseTool
@@ -6,8 +6,8 @@ import os
 from src.apis.open_weather.one_call_api import OneCallApiParams, OneCallApi
 
 
-class OpenWeathreTool(BaseTool):
-    name = 'get_weather'
+class GetCurrentWeatherTool(BaseTool):
+    name = 'get_current_weather'
     description = 'Acquire current weather at a specified location.'
     args_schema: Optional[Type[BaseModel]] = OneCallApiParams
 
