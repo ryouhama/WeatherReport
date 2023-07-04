@@ -1,8 +1,8 @@
-from typing import Optional, Type, Any
+import os
+from typing import Optional, Type
 from json import dumps as json_dumps
 from pydantic import BaseModel
 from langchain.tools import BaseTool
-import os
 from src.apis.open_weather.one_call_api import OneCallApiParams, OneCallApi
 
 

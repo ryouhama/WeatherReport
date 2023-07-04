@@ -27,7 +27,12 @@ def run(prompt: str):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--prompt', type=str, default='東京の天気を教えてくれますか？')
+    parser.add_argument(
+        '--prompt',
+        type=str,
+        default='東京の天気を教えてくれますか？',
+        required=True
+    )
     args = parser.parse_args()
     setup()
     run(prompt=args.prompt)
